@@ -1,0 +1,15 @@
+.html {
+    background: -webkit-gradient(linear, top, bottom, from(#003399), to(#6699cc));
+    background: -webkit-linear-gradient(#003399, #6699cc);
+    background: -moz-linear-gradient(#003399, #6699cc);
+    background: -ms-linear-gradient(#003399, #6699cc);
+    background: -o-linear-gradient(#003399, #6699cc);
+    background: linear-gradient(#003399, #6699cc);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003399',  
+        endColorstr='#6699cc');
+}
+.blur
+{
+
+    opacity:0.3;
+}

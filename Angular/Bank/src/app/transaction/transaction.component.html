@@ -1,0 +1,58 @@
+    <div class="gradient-custom-transaction">
+        <!-- <div class="fw-bold mb-2 py-3 px-5 text-uppercase fs-4">
+            <h4 style="color:white;">welcome <span style="color:gold"></span></h4>
+        </div>
+ -->
+        <div class=" p-5  ">
+
+
+
+            <div class="wrapper rounded mb-3">
+                <nav class="navbar navbar-expand-lg navbar-dark dark d-lg-flex align-items-lg-start"> <a
+                        class="navbar-brand" href="#">Transactions <p class="text-muted pl-1">Welcome to your
+                            transactions
+                        </p> </a> <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                </nav>
+                <div class="row mt-2 pt-2">
+                    <div class="col-md-6" id="income">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <p class="fa fa-long-arrow-up"></p>
+                            <p class="fa fa-"></p>
+
+                            <h5 class="text mx-3">Balance</h5>
+                            <h4 class="text-white ml-4 money">Rs {{balance}}</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <ul class="nav nav-tabs w-75">
+                        <li class="nav-item"> <a class="nav-link active" href="#history">History</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Reports</a> </li>
+                    </ul> <button class="btn btn-primary p-1" routerLink="/dashboard">New Transaction</button>
+                </div>
+                <div style="margin:auto;" class="table-responsive  mt-3">
+                    <table class="table table-dark table-borderless mb-5">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr *ngFor="let transaction of transactions; let i=index">
+                                <th>{{i+1}}</th>
+                               <th>{{transaction.Type}}</th>
+                                <th>{{transaction.amount}}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
