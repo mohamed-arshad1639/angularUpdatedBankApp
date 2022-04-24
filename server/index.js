@@ -138,6 +138,16 @@ app.post('/transaction',jwtMiddleware,(req,res)=>{
 
 })
 
+//delete api
+app.delete('/delete/:acno',(req,res)=>{
+    console.log(req.params.acno);
+    dataService.deleteAcc(req.params.acno)
+    .then(result=>{
+        res.status(result.statusCode).json(result)
+    })
+
+})
+
 
 
 

@@ -48,7 +48,7 @@
 
 
 
-            <app-delete-conformation (onCacel)="cancelFromParent()" [item]="acno"></app-delete-conformation>
+            <app-delete-conformation (onCacel)="cancelFromParent()" (onDelete)="deleteFromparent($event)" [item]="acno"></app-delete-conformation>
 
             <div [ngClass]="acno?'blur':''"  class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card bg-dark text-white" style="border-radius: 1rem;">

@@ -139,8 +139,8 @@ const deposit = (acno, pswd, amt) => {
 const withdraw = (req, acno, pswd, amt) => {
 
 
-  var amount = parseInt(amt)
-  var currentAcNo = req.currentAcNo
+   var amount = parseInt(amt)
+   var currentAcNo = req.currentAcNo
 
 
 
@@ -228,10 +228,32 @@ const getTransaction = (acno) => {
     })
 }
 
+const deleteAcc=(acno=>{
+  console.log(acno);
+  return db.User.deleteOne({acno}).then(user=>{
+    if(user)
+    {
+      return {
+        statusCode: 200,
+        staus: true,
+        transaction:"Account deleted Successfully"
+      }
+
+    }
+    else{
+      return {
+        statusCode: 400,
+        staus: false,
+        message: "Invalid Credentials....."
+      }
+    }
+  })
+})
 
 
 
-module.exports = {
-  register, login, deposit, withdraw, getTransaction
+
+module.exports= {
+  register, login, deposit, withdraw, getTransaction,deleteAcc
 }
 

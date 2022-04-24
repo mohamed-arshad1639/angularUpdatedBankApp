@@ -141,6 +141,13 @@ withdraw(acno:any,pswd:any,amt:any)
 
 
 }
+//DELETE ACCOUNT
+deleteAccount(acno:any){
+
+  console.log(acno);
+  
+  return this.Http.delete("http://localhost:4000/deleteAcc/"+acno)
+}
 }
 
 

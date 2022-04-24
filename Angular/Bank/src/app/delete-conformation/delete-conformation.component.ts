@@ -9,6 +9,7 @@ export class DeleteConformationComponent implements OnInit {
 
   @Input() item:string|undefined
   @Output() onCacel= new EventEmitter()
+  @Output() onDelete= new EventEmitter()
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class DeleteConformationComponent implements OnInit {
   {
     this.onCacel.emit()
 
+  }
+  Delete()
+  {
+    this.onDelete.emit(this.item)
   }
 
 }

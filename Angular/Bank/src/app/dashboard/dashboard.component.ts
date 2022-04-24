@@ -123,7 +123,7 @@ export class DashboardComponent implements OnInit {
   else{
     alert("invalid form")
   }
-}
+ }
 
   logOut() {
     localStorage.removeItem("currentAcno")
@@ -138,6 +138,20 @@ export class DashboardComponent implements OnInit {
   }
   cancelFromParent() {
     this.acno = ""
+  }
+  deleteFromparent(event:any){
+    console.log(event);
+    
+     this.ds.deleteAccount(event).subscribe((result:any)=>{
+       if(result)
+       {
+         alert(result.message)
+       }
+     },
+     (result)=>{
+       alert(result.error.message)
+     }
+     )
   }
 
 
